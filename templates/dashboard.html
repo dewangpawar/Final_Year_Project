@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock title %}
+{% block body %}
+{% if user.is_authenticated %}
+<main id="main">
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing mt-5">
+        <div class="container" data-aos="fade-up">
+          <div class="row mt-5 justify-content-center">
+  
+            <div class="col-lg-4 col-md-6">
+              <div class="box" data-aos="fade-up" data-aos-delay="100">
+                <h2>Non - MRI Prediction</h2>
+                <hr>
+                <a href="non_mri" class="btn btn-outline-primary btn-lg" type="button">Fill Form</a>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <h2>MRI Prediction</h2>
+                <hr>
+                <a href="mri" class="btn btn-outline-primary btn-lg" type="button">Fill Form</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Pricing Section -->
+</main>
+{% endif %}
+{% endblock body %}
